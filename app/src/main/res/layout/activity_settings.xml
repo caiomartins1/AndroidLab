@@ -5,35 +5,33 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/main_ll">
+    tools:context=".SettingsActivity">
 
     <ImageView
-        android:id="@+id/main_image"
+        android:id="@+id/settings_image"
         android:layout_width="274dp"
         android:layout_height="314dp"
         android:contentDescription="@string/splash_paint_image_dsc"
         android:src="@drawable/paint" />
 
+    <EditText
+        android:id="@+id/settings_et_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/settings_et_color"
+        android:layout_marginHorizontal="40dp"
+        android:textAlignment="center" />
+
     <Button
-        android:id="@+id/main_button_settings"
+        android:id="@+id/settings_button_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/cardview_dark_background"
         android:padding="12dp"
-        android:text="@string/main_button_settings"
-        android:onClick="launchSettingsActivity"/>
+        android:text="@string/settings_button_color"
+        android:onClick="setBackgroundColor"/>
 
-    <Button
-        android:id="@+id/main_button_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:backgroundTint="@color/cardview_dark_background"
-        android:padding="12dp"
-        android:text="@string/main_button_about"
-        android:onClick="launchAboutActivity"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

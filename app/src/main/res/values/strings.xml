@@ -8,4 +8,6 @@
     <string name="about_image_dsc">Profile Photo</string>
     <string name="about_tv_name">Caio Martins</string>
     <string name="about_tv_dsc">Software Developer @ PwC | MSc Informatics Engineering Student</string>
+    <string name="settings_et_color">Color Hex</string>
+    <string name="settings_button_color">Set Background Color</string>
 </resources>
