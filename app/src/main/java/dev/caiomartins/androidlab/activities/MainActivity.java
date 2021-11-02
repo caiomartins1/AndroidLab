@@ -1,4 +1,4 @@
-package dev.caiomartins.androidlab;
+package dev.caiomartins.androidlab.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -8,8 +8,9 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+
+import dev.caiomartins.androidlab.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,5 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 main_ll.setBackgroundColor(Color.parseColor(hex));
             }
         }
+    }
+
+    public void launchDrawActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, DrawActivity.class);
+        startActivity(intent);
     }
 }

@@ -1,4 +1,4 @@
-package dev.caiomartins.androidlab;
+package dev.caiomartins.androidlab.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import dev.caiomartins.androidlab.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

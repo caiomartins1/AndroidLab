@@ -10,4 +10,7 @@
     <string name="about_tv_dsc">Software Developer @ PwC | MSc Informatics Engineering Student</string>
     <string name="settings_et_color">Color Hex</string>
     <string name="settings_button_color">Set Background Color</string>
+    <string name="main_button_draw">Draw</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,9 +1,11 @@
-package dev.caiomartins.androidlab;
+package dev.caiomartins.androidlab.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import dev.caiomartins.androidlab.R;
 
 public class AboutActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package dev.caiomartins.androidlab;
+package dev.caiomartins.androidlab.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import dev.caiomartins.androidlab.R;
 
 public class SplashActivity extends AppCompatActivity {
 
