@@ -11,16 +11,17 @@
     <fragment
         android:name="dev.caiomartins.androidlab.fragments.CanvasFragment"
         android:id="@+id/canvas_fragment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.7" />
+        android:layout_weight="1" />
 
     <fragment
         android:id="@+id/palette_fragment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="dev.caiomartins.androidlab.fragments.PaletteFragment"
-        android:layout_weight="0.3"/>
+
+        android:layout_weight="3"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

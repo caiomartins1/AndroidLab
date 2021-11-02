@@ -4,10 +4,14 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
+import dev.caiomartins.androidlab.GestureListener;
+import dev.caiomartins.androidlab.PaintCanvas;
 import dev.caiomartins.androidlab.R;
 
 
@@ -47,6 +51,7 @@ public class CanvasFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -57,6 +62,19 @@ public class CanvasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_canvas, container, false);
+        View v =  inflater.inflate(R.layout.fragment_canvas, container, false);
+
+        GestureListener mGestureListener = new GestureListener();
+        GestureDetector mGestureDetector = new GestureDetector(getActivity().getApplicationContext(), mGestureListener);
+        mGestureDetector.setIsLongpressEnabled(true);
+        mGestureDetector.setOnDoubleTapListener(mGestureListener);
+
+        PaintCanvas paintCanvas = new PaintCanvas(getActivity().getApplicationContext(), null, mGestureDetector);
+        mGestureListener.setCanvas(paintCanvas);
+
+        RelativeLayout rl = v.findViewById(R.id.draw_canvas_rl);
+        rl.addView(paintCanvas);
+
+        return v;
     }
 }
