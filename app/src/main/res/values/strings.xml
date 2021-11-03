@@ -13,4 +13,12 @@
     <string name="main_button_draw">Draw</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="palette_background_color">Background Color</string>
+    <string name="palette_erase">Erase</string>
+    <string name="palette_black">Black</string>
+    <string name="palette_red">Red</string>
+    <string name="palette_green">Green</string>
+    <string name="palette_blue">Blue</string>
+    <string name="palette_custom_color_hex">Custom color Hex</string>
+    <string name="palette_apply">Apply</string>
 </resources>

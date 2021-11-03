@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import dev.caiomartins.androidlab.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PaletteFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PaletteFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match

@@ -10,9 +10,11 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.annotation.ColorInt;
+
 import java.util.Random;
 
-public class PaintCanvas extends View implements View.OnTouchListener{
+public class PaintCanvas extends View implements View.OnTouchListener {
 
     private Paint paint = new Paint();
     private Path path = new Path();
@@ -40,7 +42,7 @@ public class PaintCanvas extends View implements View.OnTouchListener{
     }
 
     @Override
-    public boolean performClick(){
+    public boolean performClick() {
         return super.performClick();
     }
 
@@ -73,22 +75,27 @@ public class PaintCanvas extends View implements View.OnTouchListener{
         return true;
     }
 
-    public void changeBackground(){
+    public void changeBackground() {
         Random r = new Random();
         backGroundColor = Color.rgb(r.nextInt(256), r.nextInt(256), r.nextInt(256));
         setBackgroundColor(backGroundColor);
     }
 
-    public void erase(){
-        paint.setColor(backGroundColor);
+    public void erase() {
+        path.reset();
     }
 
-    private void initPaint(){
+    private void initPaint() {
         paint.setAntiAlias(true);
         paint.setStrokeWidth(20f);
         paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeJoin(Paint.Join.ROUND);
+    }
+
+    public void setColor(String colorHex) {
+        int colorInt = Color.parseColor(colorHex);
+        paint.setColor(colorInt);
     }
 
 }
