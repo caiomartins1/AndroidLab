@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import dev.caiomartins.androidlab.GestureListener;
 import dev.caiomartins.androidlab.PaintCanvas;
 import dev.caiomartins.androidlab.R;
@@ -68,4 +71,10 @@ public class CanvasFragment extends Fragment {
     public void changeBackgroundColor() {
         paintCanvas.changeBackground();
     }
+
+    public void saveDraw() {
+        paintCanvas.saveDraw();
+    }
+
+    public void loadDraw() { paintCanvas.loadDraw(); }
 }

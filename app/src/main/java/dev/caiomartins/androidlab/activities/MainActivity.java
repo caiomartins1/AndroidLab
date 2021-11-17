@@ -8,6 +8,7 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import dev.caiomartins.androidlab.R;
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.hide();
         }
-
 
     }
 

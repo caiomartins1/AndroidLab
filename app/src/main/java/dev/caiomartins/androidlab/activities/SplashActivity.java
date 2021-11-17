@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import dev.caiomartins.androidlab.R;
@@ -21,6 +22,13 @@ public class SplashActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.hide();
         }
+
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }, 2000);
     }
 
 

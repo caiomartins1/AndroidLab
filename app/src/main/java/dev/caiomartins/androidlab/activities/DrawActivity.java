@@ -11,10 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.util.Locale;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import dev.caiomartins.androidlab.GestureListener;
-import dev.caiomartins.androidlab.PaintCanvas;
 import dev.caiomartins.androidlab.R;
 import dev.caiomartins.androidlab.fragments.CanvasFragment;
 
@@ -76,5 +75,13 @@ public class DrawActivity extends AppCompatActivity {
     }
     public void changeBackgroundColor(View view) {
         canvasFragment.changeBackgroundColor();
+    }
+
+    public void saveDraw(View view) {
+        canvasFragment.saveDraw();
+    }
+
+    public void loadDraw(View view) {
+        canvasFragment.loadDraw();
     }
 }
