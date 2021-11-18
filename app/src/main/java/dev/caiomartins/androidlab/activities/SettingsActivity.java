@@ -34,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
         String hex = colorEditText.getText().toString();
 
         if (hex.isEmpty()) {
+            hex = "#ffffff";
             Toast.makeText(getApplicationContext(),"Hex can't be empty!",Toast.LENGTH_SHORT).show();
         }
 

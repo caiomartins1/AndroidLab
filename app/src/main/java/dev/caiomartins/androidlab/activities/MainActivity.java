@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,11 +17,19 @@ import dev.caiomartins.androidlab.R;
 public class MainActivity extends AppCompatActivity {
 
     private int REQUEST_CODE = 200;
+    private LinearLayoutCompat main_ll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        main_ll = findViewById(R.id.main_ll);
+
+        // Retrieving saved background color
+        SharedPreferences prefs = getSharedPreferences("bg", MODE_PRIVATE);
+        String hex = prefs.getString("color", "#ffffff");
+        main_ll.setBackgroundColor(Color.parseColor(hex));
 
         // Hiding Action Bar
         ActionBar actionBar = getSupportActionBar();
@@ -49,8 +58,12 @@ public class MainActivity extends AppCompatActivity {
             if (data.hasExtra("colorHex")) {
                 String hex = data.getStringExtra("colorHex");
 
-                LinearLayoutCompat main_ll = findViewById(R.id.main_ll);
+
                 main_ll.setBackgroundColor(Color.parseColor(hex));
+
+                SharedPreferences.Editor editor = getSharedPreferences("bg", MODE_PRIVATE).edit();
+                editor.putString("color", hex);
+                editor.apply();
             }
         }
     }
